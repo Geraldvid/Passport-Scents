@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Passport Scents</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../res/css/style.css">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark fixed-top px-3">
+  <a class="navbar-brand text-gold-catalogo fw-bold" href="..//index.html">Passport Scents</a>
+  <a href="carrito.html" id="btnCarrito" 
+   class="btn btn-gold position-relative">
+  🛒 <span>Carrito</span>
+  <span id="contadorCarrito" 
+        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    0
+  </span>
+</a>
+</nav>
+<div style="margin-top:70px"></div>
+
+<!-- Espacio para que el nav no tape el contenido -->
+<div style="margin-top:70px"></div>
+
+<!-- Espacio para que el nav no tape el contenido -->
+<div style="margin-top:70px"></div>
+
+<!-- Barra de búsqueda -->
+<input type="text" id="buscador" class="form-control mb-3" placeholder="Buscar perfume...">
+
+<!-- Selector de país -->
+<select id="filtroPais" class="form-select mb-3">
+  <option value="todos">Todos los países</option>
+  <option value="Francia">Francia</option>
+  <option value="Italia">Italia</option>
+  <option value="Canadá">Canadá</option>
+  <option value="Reino Unido">Reino Unido</option>
+</select>
+
+  <!-- Catálogo -->
+  <div class="container py-5">
+    <h2 class="text-center text-warning mb-4">Catálogo de Perfumes</h2>
+    <div class="row g-4">
+
+      <!-- Rock Rose -->
+
+     <div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Rock Rose"
+       data-pais="Reino Unido"
+       data-notas="Oriental Fougere">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Rock Rose.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Rock Rose"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal1">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Rock Rose</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizerockrose" class="form-label">Tamaño:</label>
+      <select id="sizerockrose" class="form-select mb-2">
+      <option value="1ml">1 ml - ₡10,000</option>
+      <option value="2ml">2 ml - ₡20,000</option>
+      <option value="5ml">5 ml - ₡40,000</option>
+      <option value="10ml">10 ml - ₡70,000</option>
+    </select>
+
+    <label for="cantidadrockrose" class="form-label">Cantidad:</label>
+    <input type="number" id="cantidadrockrose" class="form-control mb-3" min="1" value="1">
+
+    <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Rock Rose', this)">
+      Agregar al Carrito
+    </button>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal1" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Rock Rose.jpg" class="img-fluid fullscreen-img" alt="Rock Rose">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Ambre Rubis -->
+    <div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Ambre Rubis"
+       data-pais="Francia"
+       data-notas="Oriental">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Amber Rubis.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Ambre Rubis"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal2">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Ambre Rubis</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizeambrerubis" class="form-label">Tamaño:</label>
+      <select id="sizeambrerubis" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡5,000</option>
+        <option value="2ml">2 ml - ₡8,000</option>
+        <option value="5ml">5 ml - ₡25,000</option>
+        <option value="10ml">10 ml - ₡40,000</option>
+      </select>
+
+      <label for="cantidadambrerubis" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadambrerubis" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Ambre Rubis', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal2" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Amber Rubis.jpg" class="img-fluid fullscreen-img" alt="Ambre Rubis">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Cobalt Blue -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Cobalt Blue"
+       data-pais="Italia"
+       data-notas="Amaderada Floral Especiada">
+
+    <!-- Imagen clickeable -->
+    <img src="..//img/detallada/Cobalt Blue.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Cobalt Blue"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal3">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Cobalt Blue</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizecobaltblue" class="form-label">Tamaño:</label>
+      <select id="sizecobaltblue" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡9,000</option>
+        <option value="2ml">2 ml - ₡17,000</option>
+        <option value="5ml">5 ml - ₡35,000</option>
+        <option value="10ml">10 ml - ₡50,000</option>
+      </select>
+
+      <label for="cantidadcobaltblue" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadcobaltblue" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Cobalt Blue', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal3" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="..//img/detallada/Cobalt Blue.jpg" class="img-fluid fullscreen-img" alt="Cobalt Blue">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Dangerous -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Dangerous Complicity"
+       data-pais="Francia"
+       data-notas="Aromática">
+
+    <!-- Imagen clickeable -->
+    <img src="..//img/detallada/Dangerous Complicity.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Dangerous Complicity"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal4">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Dangerous Complicity</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizedangerouscomplicity" class="form-label">Tamaño:</label>
+      <select id="sizedangerouscomplicity" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡3,000</option>
+        <option value="2ml">2 ml - ₡6,000</option>
+        <option value="5ml">5 ml - ₡12,000</option>
+        <option value="10ml">10 ml - ₡24,000</option>
+      </select>
+
+      <label for="cantidaddangerouscomplicity" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidaddangerouscomplicity" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Dangerous Complicity', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal4" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="..//img/detallada/Dangerous Complicity.jpg" class="img-fluid fullscreen-img" alt="Dangerous Complicity">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Dulce Pear -->
+
+  <div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Dulce Pear"
+       data-pais="Francia"
+       data-notas="Almizcle Amaderado Floral">
+
+    <!-- Imagen clickeable -->
+    <img src="..//img/detallada/Dulce Pear.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Dulce Pear"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal5">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Dulce Pear</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizedulcepear" class="form-label">Tamaño:</label>
+      <select id="sizedulcepear" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡6,000</option>
+        <option value="2ml">2 ml - ₡12,000</option>
+        <option value="5ml">5 ml - ₡28,000</option>
+        <option value="10ml">10 ml - ₡40,000</option>
+      </select>
+
+      <label for="cantidaddulcepear" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidaddulcepear" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Dulce Pear', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal5" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="..//img/detallada/Dulce Pear.jpg" class="img-fluid fullscreen-img" alt="Dulce Pear">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Giardinodiercole -->
+
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Giardinodiercole"
+       data-pais="Italia"
+       data-notas="Aromática Cítrica">
+
+    <!-- Imagen clickeable -->
+    <img src="..//img/detallada/Giardinodiercole.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Giardinodiercole"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal6">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Giardinodiercole</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizegiardinodiercole" class="form-label">Tamaño:</label>
+      <select id="sizegiardinodiercole" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡6,000</option>
+        <option value="2ml">2 ml - ₡8,000</option>
+        <option value="5ml">5 ml - ₡35,000</option>
+        <option value="10ml">10 ml - ₡40,000</option>
+      </select>
+
+      <label for="cantidadgiardinodiercole" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadgiardinodiercole" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Giardinodiercole', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal6" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="..//img/detallada/Giardinodiercole.jpg" class="img-fluid fullscreen-img" alt="Giardinodiercole">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Lovebird -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Lovebird"
+       data-pais="Canadá"
+       data-notas="Floral Afrutada">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Lovebird.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Lovebird"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal7">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Lovebird</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizelovebird" class="form-label">Tamaño:</label>
+      <select id="sizelovebird" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡5,000</option>
+        <option value="2ml">2 ml - ₡8,000</option>
+        <option value="5ml">5 ml - ₡25,000</option>
+        <option value="10ml">10 ml - ₡40,000</option>
+      </select>
+
+      <label for="cantidadlovebird" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadlovebird" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Lovebird', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal7" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Lovebird.jpg" class="img-fluid fullscreen-img" alt="Lovebird">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Paragon -->
+
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Paragon"
+       data-pais="Francia"
+       data-notas="Amaderada Especiada">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Paragon.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Paragon"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal8">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Paragon</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizeparagon" class="form-label">Tamaño:</label>
+      <select id="sizeparagon" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡5,000</option>
+        <option value="2ml">2 ml - ₡8,000</option>
+        <option value="5ml">5 ml - ₡18,000</option>
+        <option value="10ml">10 ml - ₡30,000</option>
+      </select>
+
+      <label for="cantidadparagon" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadparagon" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Paragon', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal8" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Paragon.jpg" class="img-fluid fullscreen-img" alt="Paragon">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Porthole -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Porthole"
+       data-pais="Francia"
+       data-notas="Floral Afrutado">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Porthole.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Porthole"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal9">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Porthole</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizeporthole" class="form-label">Tamaño:</label>
+      <select id="sizeporthole" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡5,000</option>
+        <option value="2ml">2 ml - ₡8,000</option>
+        <option value="5ml">5 ml - ₡25,000</option>
+        <option value="10ml">10 ml - ₡40,000</option>
+      </select>
+
+      <label for="cantidadporthole" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadporthole" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Porthole', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal9" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Porthole.jpg" class="img-fluid fullscreen-img" alt="Porthole">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Scusami -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Scusami"
+       data-pais="Italia"
+       data-notas="Oriental Floral">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Scusami.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Scusami"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal10">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Scusami</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizescusami" class="form-label">Tamaño:</label>
+      <select id="sizescusami" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡4,000</option>
+        <option value="2ml">2 ml - ₡8,000</option>
+        <option value="5ml">5 ml - ₡28,000</option>
+        <option value="10ml">10 ml - ₡40,000</option>
+      </select>
+
+      <label for="cantidadscusami" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadscusami" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Scusami', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal10" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Scusami.jpg" class="img-fluid fullscreen-img" alt="Scusami">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Sedley -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Sedley"
+       data-pais="Francia"
+       data-notas="Amaderada Aromática">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Sedley.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Sedley"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal11">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Sedley</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizesedley" class="form-label">Tamaño:</label>
+      <select id="sizesedley" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡3,000</option>
+        <option value="2ml">2 ml - ₡6,000</option>
+        <option value="5ml">5 ml - ₡12,000</option>
+        <option value="10ml">10 ml - ₡24,000</option>
+      </select>
+
+      <label for="cantidadsedley" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadsedley" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Sedley', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal11" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Sedley.jpg" class="img-fluid fullscreen-img" alt="Sedley">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!--Venom Incarnat  -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Venom Incarnat"
+       data-pais="Francia"
+       data-notas="Vainilla Oriental">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Venom Incarnat.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Venom Incarnat"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal12">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Venom Incarnat</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizevenomincarnat" class="form-label">Tamaño:</label>
+      <select id="sizevenomincarnat" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡6,000</option>
+        <option value="2ml">2 ml - ₡9,000</option>
+        <option value="5ml">5 ml - ₡25,000</option>
+        <option value="10ml">10 ml - ₡45,000</option>
+      </select>
+
+      <label for="cantidadvenomincarnat" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadvenomincarnat" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Venom Incarnat', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal12" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Venom Incarnat.jpg" class="img-fluid fullscreen-img" alt="Venom Incarnat">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Volcanic Flowers -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="card bg-dark border-warning h-100"
+       data-nombre="Volcanic Flowers"
+       data-pais="Francia"
+       data-notas="Picante Oriental">
+
+    <!-- Imagen clickeable -->
+    <img src="../img/detallada/Volcanic Flower.jpg" 
+         class="card-img-top cursor-pointer" 
+         alt="Volcanic Flowers"
+         data-bs-toggle="modal" 
+         data-bs-target="#imagenModal13">
+
+    <div class="card-body">
+      <h5 class="card-title text-warning fw-bold">Volcanic Flowers</h5>
+
+      <!-- Ficha rápida -->
+      <label for="sizevolcanicflowers" class="form-label">Tamaño:</label>
+      <select id="sizevolcanicflowers" class="form-select mb-2">
+        <option value="1ml">1 ml - ₡6,000</option>
+        <option value="2ml">2 ml - ₡8,000</option>
+        <option value="5ml">5 ml - ₡35,000</option>
+        <option value="10ml">10 ml - ₡50,000</option>
+      </select>
+
+      <label for="cantidadvolcanicflowers" class="form-label">Cantidad:</label>
+      <input type="number" id="cantidadvolcanicflowers" class="form-control mb-3" min="1" value="1">
+
+      <button class="btn btn-warning w-100 fw-bold mb-2" onclick="agregarAlCarrito('Volcanic Flowers', this)">
+        Agregar al Carrito
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal fullscreen solo con imagen -->
+<div class="modal fade" id="imagenModal13" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
+        <img src="../img/detallada/Volcanic Flower.jpg" class="img-fluid fullscreen-img" alt="Volcanic Flowers">
+      </div>
+      <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- //fin de contenedor -->
+    </div>
+  </div>
+
+ 
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="..//res/js/catalogo.js"></script>
+  
+
+</body>
+</html>

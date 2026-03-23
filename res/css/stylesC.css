@@ -1,0 +1,31 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.border-gold {
+  border-color: #d4af37 !important;
+}
+
+.text-gold {
+  color: #d4af37;
+}
+
+.btn-gold {
+  background-color: #d4af37;
+  color: #000;
+  font-weight: bold;
+}
+
+.btn-gold:hover {
+  background-color: #c49c2b;
+}
+
+.formulario-cliente {
+  background-color: #111;
+  border: 1px solid #d4af37;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
