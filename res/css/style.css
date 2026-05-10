@@ -13,6 +13,31 @@ body {
     background-attachment: scroll;
   }
 }
+/* Por defecto (móvil): ancho completo */
+#buscador,
+#filtroPais {
+  border: 2px solid #d4af37;
+  background-color: #111;
+  color: #fff;
+  width: 90%;        /* siempre full en móvil */
+  display: block;
+  margin: 0 auto; 
+}
+
+/* Tablet y PC: centrado al 50% */
+@media (min-width: 768px) {
+  #buscador,
+  #filtroPais {
+    width: 60%;        /* mitad del ancho */
+    margin: 0 auto;    /* centrado */
+  }
+}
+
+#buscador::placeholder {
+  color: #aaa;
+}
+
+
 .texto{
   color: #fff;
 }
@@ -115,5 +140,50 @@ body {
   color: #d4af37;
   font-weight: bold;
   font-size: 22px;
+}
+
+/* Etiqueta diagonal */
+.etiqueta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.etiqueta span {
+  transform: rotate(-45deg);
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8rem 6rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Colores específicos */
+.etiqueta.proximamente span {
+  background-color: #f1c40f;
+}
+
+.etiqueta.agotado span {
+  background-color: #e74c3c;
+}
+
+.etiqueta.nuevo span {
+  background-color: #f39c12;
+  transform: rotate(0deg);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
 }
 

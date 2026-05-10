@@ -73,26 +73,66 @@ actualizarContador();
 
 const buscador = document.getElementById("buscador");
 const filtroPais = document.getElementById("filtroPais");
-const tarjetas = document.querySelectorAll(".card");
+const columnas  = document.querySelectorAll(".col-12.col-md-6.col-lg-4");
 
 function filtrar() {
   const texto = buscador.value.toLowerCase();
   const pais = filtroPais.value;
 
-  tarjetas.forEach(card => {
-    const nombre = card.dataset.nombre.toLowerCase();
-    const paisCard = card.dataset.pais;
+  columnas.forEach(col => {
+    const nombre = col.dataset.nombre?.toLowerCase() || "";
+    const paisCard = col.dataset.pais || "";
 
     const coincideNombre = nombre.includes(texto);
     const coincidePais = (pais === "todos" || paisCard === pais);
 
     if (coincideNombre && coincidePais) {
-      card.style.display = "block";
+      col.classList.remove("d-none");
     } else {
-      card.style.display = "none";
+      col.classList.add("d-none");
     }
   });
 }
 
 buscador.addEventListener("input", filtrar);
 filtroPais.addEventListener("change", filtrar);
+
+function agregarEtiqueta(idTarjeta, tipo) {
+  const tarjeta = document.getElementById(idTarjeta);
+  if (!tarjeta) return;
+
+  // Elimina etiquetas previas si existen
+  const etiquetaExistente = tarjeta.querySelector(".etiqueta");
+  if (etiquetaExistente) etiquetaExistente.remove();
+
+  // Crea nueva etiqueta
+  const etiqueta = document.createElement("div");
+  etiqueta.classList.add("etiqueta", tipo);
+
+  const texto = document.createElement("span");
+  texto.textContent = tipo === "proximamente" ? "PRÓXIMAMENTE" :
+                      tipo === "agotado" ? "AGOTADO" :
+                      tipo === "nuevo" ? "NUEVO" : "";
+
+  etiqueta.appendChild(texto);
+  tarjeta.appendChild(etiqueta);
+
+  // Bloquear botón si es agotado o próximamente
+  const boton = tarjeta.querySelector("button");
+  if (tipo === "agotado" || tipo === "proximamente") {
+    boton.disabled = true;
+    boton.classList.add("opacity-50");
+    boton.textContent = "No disponible";
+  } else {
+    boton.disabled = false;
+    boton.classList.remove("opacity-50");
+    boton.textContent = "Agregar al Carrito";
+  }
+}
+
+agregarEtiqueta("scusami-card", "proximamente");
+agregarEtiqueta("ani-card", "agotado");
+agregarEtiqueta("Baz-card", "nuevo");
+agregarEtiqueta("Dolce-card", "nuevo");
+agregarEtiqueta("Ray-card", "nuevo");
+

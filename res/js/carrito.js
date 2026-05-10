@@ -86,7 +86,7 @@ function enviarPorWhatsApp() {
   }
 
   // Número fijo de la tienda (ejemplo Costa Rica: 506XXXXXXXX)
-  const numeroTienda = "50663185479";  
+  const numeroTienda = "50687633153";  
 
   // Abrir el chat de la tienda
   const url = mensaje 
